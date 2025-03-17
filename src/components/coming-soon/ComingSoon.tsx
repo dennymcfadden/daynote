@@ -13,7 +13,7 @@ export const ComingSoon: React.FC = () => {
             memories. Entries are organized by day—year over year—connecting the
             moments that matter most.
           </p>
-          <p className="mt-6">
+          <p className="mt-6 text-xl">
             It's easy to capture your stories—just speak, and Daynote will turn
             your words into text and keep everything organized for you
           </p>
