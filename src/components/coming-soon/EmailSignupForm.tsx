@@ -1,8 +1,10 @@
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -28,11 +30,25 @@ export const EmailSignupForm: React.FC = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      toast.success("Thank you for joining our waitlist!");
-      reset();
+      // Insert email into Supabase waitlist table
+      const { error } = await supabase
+        .from("waitlist")
+        .insert([{ email: data.email }]);
+
+      if (error) {
+        // Check if it's a duplicate email error
+        if (error.code === "23505") {
+          toast.info("You're already on our waitlist!");
+        } else {
+          console.error("Error saving email:", error);
+          toast.error("Something went wrong. Please try again.");
+        }
+      } else {
+        toast.success("Thank you for joining our waitlist!");
+        reset();
+      }
     } catch (error) {
+      console.error("Unexpected error:", error);
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
