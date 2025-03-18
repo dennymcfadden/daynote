@@ -25,8 +25,46 @@ const handler = async (req: Request): Promise<Response> => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  console.log("Starting send-welcome-email function");
+  
   try {
-    const payload: EmailPayload = await req.json();
+    // Log the raw request body for debugging
+    const bodyText = await req.text();
+    console.log("Raw request body:", bodyText);
+    
+    // Parse the JSON manually after logging
+    let payload: EmailPayload;
+    try {
+      payload = JSON.parse(bodyText);
+      console.log("Parsed payload:", payload);
+    } catch (parseError) {
+      console.error("JSON parse error:", parseError);
+      return new Response(
+        JSON.stringify({ 
+          success: false,
+          error: "Invalid JSON payload: " + parseError.message
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+    
+    // Validate the payload
+    if (!payload || !payload.record || !payload.record.email) {
+      console.error("Invalid payload structure:", payload);
+      return new Response(
+        JSON.stringify({ 
+          success: false,
+          error: "Invalid payload structure. Expected record with email." 
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
     
     // Only process when a new record is inserted
     if (payload.type !== "INSERT") {
