@@ -3,8 +3,15 @@ import React from "react";
 import { Logo } from "./Logo";
 import { EmailSignupForm } from "./EmailSignupForm";
 import { ProductImage } from "./ProductImage";
+
 export const ComingSoon: React.FC = () => {
-  return <section aria-labelledby="coming-soon-title" className="flex items-center gap-[40px_94px] overflow-hidden justify-center flex-wrap px-[187px] max-md:px-5 py-[68px]">
+  return (
+    <section 
+      aria-labelledby="coming-soon-title" 
+      className="flex items-center gap-[40px_94px] overflow-hidden justify-center flex-wrap
+        px-5 sm:px-8 md:px-12 lg:px-24 xl:px-32 2xl:px-48
+        py-[68px]"
+    >
       <div className="self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full">
         <img src="/lovable-uploads/a1709f56-bd59-4c3b-ade3-b0bad52f96bc.png" alt="Daynote App Icon" className="w-16 h-16 mb-4" />
         
@@ -19,5 +26,6 @@ export const ComingSoon: React.FC = () => {
       </div>
 
       <ProductImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/e404efc726cac842eea7ce49d3931134848f7e9a07f2d28e23803ba82bc0bcfa?placeholderIfAbsent=true" />
-    </section>;
+    </section>
+  );
 };
