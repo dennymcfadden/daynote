@@ -1,4 +1,6 @@
+
 import React from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface LogoProps {
   src: string;
@@ -6,11 +8,13 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ src, className = "" }) => {
+  const isMobile = useIsMobile();
+  
   return (
     <img
       src={src}
       alt="Daynote Logo"
-      className={`object-contain ${className}`}
+      className={`object-contain ${isMobile ? 'w-[70%]' : 'w-full'} ${className}`}
     />
   );
 };
