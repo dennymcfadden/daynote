@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -66,7 +67,7 @@ export const EmailSignupForm: React.FC = () => {
       </button>
       
       <p className="text-sm text-gray-600 mt-3">
-        Have a question? <a href="mailto:hi@denny.nyc" className="text-[rgba(251,146,64,1)] hover:underline">Send me an email.</a>
+        Have a question? <a href="mailto:hi@denny.nyc" className="text-gray-600 underline">Send me an email.</a>
       </p>
     </form>;
 };
