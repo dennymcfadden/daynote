@@ -40,6 +40,6 @@ enable_signup = true
 [functions]
 enabled = true
 
-[[functions.function]]
+[[functions.hooks]]
 name = "send-welcome-email"
 verify_jwt = false
