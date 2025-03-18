@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface ProductImageProps {
@@ -11,7 +12,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
 }) => {
   return (
     <div
-      className={`self-stretch min-w-60 w-[476px] my-auto max-md:max-w-full ${className}`}
+      className={`self-stretch min-w-60 w-[380px] my-auto max-md:max-w-full ${className}`}
     >
       <img
         src={src}
