@@ -39,5 +39,7 @@ enable_signup = true
 
 [functions]
 enabled = true
-[functions.send-welcome-email]
+
+[[functions.function]]
+name = "send-welcome-email"
 verify_jwt = false
