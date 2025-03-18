@@ -68,7 +68,7 @@ export const EmailSignupForm: React.FC = () => {
         </div>}
       
       <p className="text-sm text-gray-600 mt-8">
-        Have a question? <a href="mailto:hi@denny.nyc" className="text-gray-600 underline">Send us an email.</a>
+        Have a question? <a href="mailto:hi@denny.nyc" className="text-gray-600 underline">Send me an email.</a>
       </p>
     </form>;
 };
