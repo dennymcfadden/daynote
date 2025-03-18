@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,18 @@
 
   body {
     @apply bg-background text-foreground;
+    line-height: 1.2; /* Base line height */
+  }
+  
+  p, span, div, li, label, input, button, textarea {
+    line-height: 1.44; /* Increased by 20% from standard 1.2 */
   }
 }
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.44; /* Increased by 20% from standard 1.2 */
+  }
+}
+
+/* ... keep existing code */

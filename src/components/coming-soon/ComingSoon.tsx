@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Logo } from "./Logo";
 import { EmailSignupForm } from "./EmailSignupForm";
@@ -9,9 +10,9 @@ export const ComingSoon: React.FC = () => {
         
         <Logo src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d11b44df90ee0b06bf7f08ab6fed9c03ca5f4f48ec41d161e8dc6389f3b533e?placeholderIfAbsent=true" className="aspect-[4.65] w-64 max-w-full" />
 
-        <article className="text-black text-2xl font-medium leading-9 mt-[72px] max-md:max-w-full max-md:mt-10">
-          <p className="text-xl">Daynote is the best way to journal because it's the journal that you will actually use. One audio note per day—automatically transcribed—snappy, happy.</p>
-          <p className="mt-6 text-xl">Journal entries are organized by date, year-over-year, connecting the moments that matter most. Every birthday, every solstice, every first day of school, connected in threads that add meaning to your memories.</p>
+        <article className="text-black text-2xl font-medium mt-[72px] max-md:max-w-full max-md:mt-10">
+          <p className="text-xl leading-relaxed">Daynote is the best way to journal because it's the journal that you will actually use. One audio note per day—automatically transcribed—snappy, happy.</p>
+          <p className="mt-6 text-xl leading-relaxed">Journal entries are organized by date, year-over-year, connecting the moments that matter most. Every birthday, every solstice, every first day of school, connected in threads that add meaning to your memories.</p>
         </article>
 
         <EmailSignupForm />
