@@ -11,7 +11,7 @@ export const ComingSoon: React.FC = () => {
 
         <article className="text-black text-2xl font-medium mt-9 max-md:max-w-full max-md:mt-5">
           <p className="leading-relaxed text-lg">Daynote is the best way to journal because it's the journal that you will actually use. One audio note per day—automatically transcribed—snappy, happy.</p>
-          <p className="mt-6 leading-relaxed text-lg">Journal entries are organized by date, year-over-year, connecting the moments that matter most. Every birthday, every solstice, every first day of school, connected in threads that add meaning to your memories.</p>
+          <p className="mt-6 leading-relaxed text-lg">Journal entries are organized by date, year-over-year, creating threads from the moments that matter most.</p>
         </article>
 
         <EmailSignupForm />
