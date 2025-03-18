@@ -4,15 +4,12 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-
 const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address"
   })
 });
-
 type FormValues = z.infer<typeof formSchema>;
-
 export const EmailSignupForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
@@ -28,7 +25,6 @@ export const EmailSignupForm: React.FC = () => {
       email: ""
     }
   });
-
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
@@ -55,11 +51,8 @@ export const EmailSignupForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-
   return <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col text-[19px] mt-[72px] max-md:max-w-full max-md:mt-10">
-      <label htmlFor="email" className="text-black text-xl font-medium self-stretch max-md:max-w-full leading-relaxed">
-        Sign up for early access:
-      </label>
+      
 
       <input id="email" type="email" placeholder="Enter your email" {...register("email")} className={`w-[447px] border border-[color:var(--colorBorder,rgba(52,51,51,0.15))] bg-white min-h-[72px] max-w-full overflow-hidden text-[#696868] font-normal leading-[30px] mt-4 pl-6 rounded-lg border-solid max-md:max-w-full max-md:pl-5 ${errors.email ? "border-red-500" : ""}`} aria-invalid={errors.email ? "true" : "false"} />
 
