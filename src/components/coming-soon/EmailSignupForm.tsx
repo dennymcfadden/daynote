@@ -1,16 +1,18 @@
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+
 const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address"
   })
 });
+
 type FormValues = z.infer<typeof formSchema>;
+
 export const EmailSignupForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
@@ -26,6 +28,7 @@ export const EmailSignupForm: React.FC = () => {
       email: ""
     }
   });
+
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
@@ -52,9 +55,8 @@ export const EmailSignupForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-  return <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col text-[19px] mt-[36px] max-md:max-w-full max-md:mt-5">
-      
 
+  return <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col text-[19px] mt-[36px] max-md:max-w-full max-md:mt-5">
       <input id="email" type="email" placeholder="Enter your email" {...register("email")} className={`w-[447px] border border-[color:var(--colorBorder,rgba(52,51,51,0.15))] bg-white min-h-[72px] max-w-full overflow-hidden text-[#696868] font-normal leading-[30px] mt-4 pl-6 rounded-lg border-solid max-md:max-w-full max-md:pl-5 ${errors.email ? "border-red-500" : ""}`} aria-invalid={errors.email ? "true" : "false"} />
 
       {errors.email && <p className="text-red-500 text-sm mt-1 leading-relaxed">{errors.email.message}</p>}
@@ -62,5 +64,9 @@ export const EmailSignupForm: React.FC = () => {
       <button type="submit" disabled={isSubmitting} className="flex-1 shrink basis-[0%] bg-[rgba(251,146,64,1)] min-h-12 w-[447px] max-w-full overflow-hidden text-black font-[590] text-center leading-[30px] mt-4 rounded-lg max-md:max-w-full hover:bg-[rgba(251,126,44,1)] transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed py-3">
         {isSubmitting ? "Submitting..." : "Join waitlist"}
       </button>
+      
+      <p className="text-sm text-gray-600 mt-3">
+        Have a question? <a href="mailto:hi@denny.nyc" className="text-[rgba(251,146,64,1)] hover:underline">Send me an email.</a>
+      </p>
     </form>;
 };
