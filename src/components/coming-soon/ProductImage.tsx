@@ -17,7 +17,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
       <img
         src={src}
         alt="Daynote App Preview"
-        className="aspect-[0.49] object-contain w-full rounded-[0px_0px_0px_0px] max-md:max-w-full"
+        className="aspect-[0.49] object-contain w-full max-h-[80vh] rounded-[0px_0px_0px_0px] max-md:max-w-full"
       />
     </div>
   );
