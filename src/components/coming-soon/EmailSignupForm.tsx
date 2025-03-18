@@ -35,13 +35,17 @@ export const EmailSignupForm: React.FC = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const {
-        error
-      } = await supabase.from("waitlist").insert([{
-        email: data.email
-      }]);
+      console.log("Submitting email:", data.email);
+      
+      // Using object notation instead of array
+      const { error } = await supabase
+        .from("waitlist")
+        .insert({
+          email: data.email
+        });
       
       if (error) {
+        console.error("Supabase error:", error);
         if (error.code === "23505") {
           toast.info("You're already on our waitlist!");
           setIsSubmitted(true);
