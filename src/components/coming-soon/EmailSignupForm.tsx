@@ -63,11 +63,11 @@ export const EmailSignupForm: React.FC = () => {
 
   return <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col text-[19px] mt-[24px] max-md:max-w-full max-md:mt-5">
       {!isSubmitted ? <>
-          <input id="email" type="email" placeholder="Enter your email" {...register("email")} className={`w-[447px] border border-[color:var(--colorBorder,rgba(52,51,51,0.15))] bg-white min-h-[72px] max-w-full overflow-hidden text-[#696868] font-normal leading-[30px] mt-4 pl-6 rounded-lg border-solid max-md:max-w-full max-md:pl-5 ${errors.email ? "border-red-500" : ""}`} aria-invalid={errors.email ? "true" : "false"} />
+          <input id="email" type="email" placeholder="Enter your email" {...register("email")} className={`w-[447px] border border-[color:var(--colorBorder,rgba(52,51,51,0.15))] bg-white min-h-[72px] md:min-h-[72px] max-md:min-h-[60px] max-w-full overflow-hidden text-[#696868] font-normal leading-[30px] mt-4 pl-6 rounded-lg border-solid max-md:max-w-full max-md:pl-5 ${errors.email ? "border-red-500" : ""}`} aria-invalid={errors.email ? "true" : "false"} />
 
           {errors.email && <p className="text-red-500 text-sm mt-1 leading-relaxed">{errors.email.message}</p>}
 
-          <button type="submit" disabled={isSubmitting} className="flex-1 shrink basis-[0%] bg-[rgba(251,146,64,1)] min-h-12 w-[447px] max-w-full overflow-hidden text-black font-[590] text-center leading-[30px] mt-4 rounded-lg max-md:max-w-full hover:bg-[rgba(251,126,44,1)] transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed py-3">
+          <button type="submit" disabled={isSubmitting} className="flex-1 shrink basis-[0%] bg-[rgba(251,146,64,1)] md:min-h-12 max-md:min-h-10 w-[447px] max-w-full overflow-hidden text-black font-[590] text-center leading-[30px] mt-4 rounded-lg max-md:max-w-full hover:bg-[rgba(251,126,44,1)] transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed md:py-3 max-md:py-2">
             {isSubmitting ? "Submitting..." : "Join waitlist"}
           </button>
         </> : <div className="w-[447px] max-w-full bg-[#D8D1CF] rounded-lg p-6 mt-4 text-center">
