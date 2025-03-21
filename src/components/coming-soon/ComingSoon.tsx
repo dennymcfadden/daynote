@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Logo } from "./Logo";
 import { EmailSignupForm } from "./EmailSignupForm";
@@ -21,6 +22,6 @@ export const ComingSoon: React.FC = () => {
         <EmailSignupForm />
       </div>
 
-      <ProductImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/e404efc726cac842eea7ce49d3931134848f7e9a07f2d28e23803ba82bc0bcfa?placeholderIfAbsent=true" />
+      <ProductImage />
     </section>;
 };
