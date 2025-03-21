@@ -13,21 +13,27 @@ export type Database = {
         Row: {
           content: string
           created_at: string
+          entry_date: string | null
           id: string
+          image_url: string | null
           updated_at: string
           user_id: string
         }
         Insert: {
           content: string
           created_at?: string
+          entry_date?: string | null
           id?: string
+          image_url?: string | null
           updated_at?: string
           user_id: string
         }
         Update: {
           content?: string
           created_at?: string
+          entry_date?: string | null
           id?: string
+          image_url?: string | null
           updated_at?: string
           user_id?: string
         }
@@ -51,6 +57,36 @@ export type Database = {
           email?: string
           id?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      user_feedback: {
+        Row: {
+          browser_info: string
+          created_at: string
+          device_info: string
+          email: string
+          id: string
+          message: string
+          user_id: string | null
+        }
+        Insert: {
+          browser_info: string
+          created_at?: string
+          device_info: string
+          email: string
+          id?: string
+          message: string
+          user_id?: string | null
+        }
+        Update: {
+          browser_info?: string
+          created_at?: string
+          device_info?: string
+          email?: string
+          id?: string
+          message?: string
+          user_id?: string | null
         }
         Relationships: []
       }
