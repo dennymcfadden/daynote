@@ -17,7 +17,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
       <img
         src="/lovable-uploads/c4930628-4cb5-4473-aad9-b48907569179.png"
         alt="Daynote App Preview"
-        className="aspect-[0.49] object-contain w-full max-h-[80vh] rounded-[20px] max-md:max-w-full shadow-lg"
+        className="aspect-[0.49] object-contain w-full max-h-[80vh] max-md:max-w-full"
       />
     </div>
   );
