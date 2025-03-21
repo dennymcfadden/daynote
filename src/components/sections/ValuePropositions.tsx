@@ -1,19 +1,10 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 export const ValuePropositions: React.FC = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section className={`px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-16 ${isMobile ? 'py-12' : 'py-20'}`}>
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Why Daynote?</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Discover why Daynote is the most intuitive journaling app you'll ever use
-        </p>
-      </div>
+  return <section className={`px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-16 ${isMobile ? 'py-12' : 'py-20'}`}>
+      
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Card className="border-none bg-transparent shadow-none">
@@ -28,9 +19,7 @@ export const ValuePropositions: React.FC = () => {
               </div>
             </div>
             <h3 className="text-xl font-semibold text-center mb-2">Voice Journal</h3>
-            <p className="text-gray-600 text-center">
-              Simply talk, and we'll record and transcribe your thoughts. No typing needed.
-            </p>
+            <p className="text-gray-600 text-center">Powered by GPT for the most accurate transcription. More thinking, less typing.</p>
           </CardContent>
         </Card>
         
@@ -46,10 +35,8 @@ export const ValuePropositions: React.FC = () => {
                 </svg>
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Daily Habit</h3>
-            <p className="text-gray-600 text-center">
-              One entry per day makes journaling a simple, sustainable habit that sticks.
-            </p>
+            <h3 className="text-xl font-semibold text-center mb-2">Daily Threads</h3>
+            <p className="text-gray-600 text-center">Entries organized by date, year-over-year, connecting rituals that matter most.</p>
           </CardContent>
         </Card>
         
@@ -63,13 +50,10 @@ export const ValuePropositions: React.FC = () => {
                 </svg>
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Smart Reminders</h3>
-            <p className="text-gray-600 text-center">
-              Gentle nudges help you maintain your journaling streak without feeling intrusive.
-            </p>
+            <h3 className="text-xl font-semibold text-center mb-2">Sunday Look-Back</h3>
+            <p className="text-gray-600 text-center">A simple reflection on the week that passed, setting a course for the week to come.</p>
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
