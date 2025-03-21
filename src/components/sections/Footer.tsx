@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 export const Footer: React.FC = () => {
@@ -6,7 +7,7 @@ export const Footer: React.FC = () => {
       <Separator className="mb-6" />
       <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
         <div className="mb-4 md:mb-0">
-          © {currentYear} Daynote. All rights reserved.
+          © {currentYear} Daynote. Made by <a href="https://www.denny.nyc" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">Denny</a>.
         </div>
         <div className="flex gap-6">
           
