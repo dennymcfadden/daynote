@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
 export const ValuePropositions: React.FC = () => {
   const isMobile = useIsMobile();
-  return <section className={`px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-16 ${isMobile ? 'py-12' : 'py-20'}`}>
+  return <section className="bg-stone-300 py-[50px]">
       
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
