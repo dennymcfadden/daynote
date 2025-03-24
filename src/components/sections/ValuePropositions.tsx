@@ -3,43 +3,43 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
 export const ValuePropositions: React.FC = () => {
   const isMobile = useIsMobile();
-  return <section className="pt-0 pb-[50px] bg-green-500">
+  return <section className="pt-8 pb-[50px] bg-green-500">
       
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Card className="border-none bg-transparent shadow-none">
           <CardContent className="p-6">
             <div className="mb-4 flex justify-center">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F9F5F2]">
-                <img src="/lovable-uploads/445428ae-d077-4000-b7de-e88d888f2fdb.png" alt="Microphone icon" className="w-6 h-6" />
+              <div className="w-24 h-24 flex items-center justify-center rounded-full bg-transparent">
+                <img alt="Microphone icon" className="w-24 h-24" src="/lovable-uploads/83b4e3cb-b8d0-42ac-8071-55fb98d08227.png" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Voice Journal</h3>
-            <p className="text-gray-600 text-center">Powered by GPT for the most accurate transcription. More thinking, less typing.</p>
+            <h3 className="text-xl font-semibold text-center mb-2 text-white">Voice Journal</h3>
+            <p className="text-center text-green-100">Powered by GPT for the most accurate transcription. More thinking, less typing.</p>
           </CardContent>
         </Card>
         
         <Card className="border-none bg-transparent shadow-none">
           <CardContent className="p-6">
             <div className="mb-4 flex justify-center">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F9F5F2]">
-                <img src="/lovable-uploads/1aedc711-d076-4723-846c-f9933d4f7679.png" alt="Sunrise icon" className="w-6 h-6" />
+              <div className="w-24 h-24 flex items-center justify-center rounded-full bg-transparent">
+                <img alt="Sunrise icon" className="w-24 h-24" src="/lovable-uploads/b2706c31-188e-4f73-830b-fb2790d663e8.png" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Daily Threads</h3>
-            <p className="text-gray-600 text-center">Entries organized by date, year-over-year, connecting rituals that matter most.</p>
+            <h3 className="text-xl font-semibold text-center mb-2 text-white">Daily Threads</h3>
+            <p className="text-center text-green-100">Entries organized by date, year-over-year, connecting rituals that matter most.</p>
           </CardContent>
         </Card>
         
         <Card className="border-none bg-transparent shadow-none">
           <CardContent className="p-6">
             <div className="mb-4 flex justify-center">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F9F5F2]">
-                <img src="/lovable-uploads/293d3e35-6d50-4cd3-a514-27f5f8e1d1a0.png" alt="Notification icon" className="w-6 h-6" />
+              <div className="w-24 h-24 flex items-center justify-center rounded-full bg-transparent">
+                <img alt="Notification icon" className="w-24 h-24" src="/lovable-uploads/6201fa12-b808-44e5-a493-ea8409f73f2e.png" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Sunday Look-Back</h3>
-            <p className="text-gray-600 text-center">A simple reflection on the week that passed, setting a course for the week to come.</p>
+            <h3 className="text-xl font-semibold text-center mb-2 text-white">Sunday Reflection</h3>
+            <p className="text-center font-normal text-green-100">A simple look back at your week, setting a course for the one ahead.</p>
           </CardContent>
         </Card>
       </div>
