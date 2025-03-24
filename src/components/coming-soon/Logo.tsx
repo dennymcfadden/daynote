@@ -3,16 +3,16 @@ import React from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface LogoProps {
-  src: string;
+  src?: string;
   className?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ src, className = "" }) => {
+export const Logo: React.FC<LogoProps> = ({ className = "" }) => {
   const isMobile = useIsMobile();
   
   return (
     <img
-      src={src}
+      src="/lovable-uploads/a26d07ac-11d9-4c48-9666-2165c737185c.png"
       alt="Daynote Logo"
       className={`${isMobile ? 'w-[60%]' : ''} object-contain ${className}`}
     />
