@@ -11,7 +11,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "" }) => {
   
   return (
     <img
-      src="/lovable-uploads/a26d07ac-11d9-4c48-9666-2165c737185c.png"
+      src="/lovable-uploads/3b45bd1f-3515-4a3c-b203-75a5e5792bfa.png"
       alt="Daynote Logo"
       className={`${isMobile ? 'w-[60%]' : 'w-56'} object-contain ${className}`}
     />
