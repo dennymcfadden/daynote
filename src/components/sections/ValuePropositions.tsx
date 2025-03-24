@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
 export const ValuePropositions: React.FC = () => {
   const isMobile = useIsMobile();
-  return <section className="pt-0 pb-[50px] bg-green-500">
+  return <section className="pt-12 pb-[50px] bg-green-500">
       
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
