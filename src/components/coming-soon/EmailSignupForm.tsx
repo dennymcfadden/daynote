@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -74,7 +75,7 @@ export const EmailSignupForm: React.FC = () => {
         </div>}
       
       <p className="text-sm text-gray-600 mt-8">
-        Have an access code? <a href="https://www.my.daynote.app" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline">Sign up today</a>
+        Have an access code? <a href="https://my.daynote.app" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline">Sign up today</a>
       </p>
     </form>;
 };
