@@ -10,7 +10,7 @@ export const ComingSoon: React.FC = () => {
   
   return <section aria-labelledby="coming-soon-title" className={`flex items-start gap-[40px_94px] overflow-hidden justify-center flex-wrap
         px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64
-        ${isMobile ? 'pt-[34px] pb-0' : 'pt-[68px] pb-0'}`}>
+        ${isMobile ? 'pt-[34px]' : 'pt-[68px]'}`}>
       <div className="self-start min-w-60 flex-1 shrink basis-[0%] max-md:max-w-full">
         <Logo className="aspect-[4.65] w-56 max-w-full" />
 
