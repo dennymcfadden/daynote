@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       
       <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
         <div className="mb-4 md:mb-0">
-          © {currentYear} Daynote. Made by <a href="https://www.denny.nyc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-800 transition-colors">Denny</a>.
+          © {currentYear} Daynote. Made by <a href="https://www.denny.nyc" target="_blank" rel="noopener noreferrer" className="text-white underline">Denny</a>.
         </div>
         <div className="flex gap-6">
           
