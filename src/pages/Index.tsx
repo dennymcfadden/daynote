@@ -5,8 +5,8 @@ import { Footer } from "@/components/sections/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-[rgba(243,239,236,1)]">
-      <div className="flex flex-col">
+    <main className="min-h-screen bg-[rgba(243,239,236,1)] flex flex-col">
+      <div className="flex flex-col flex-grow">
         <ComingSoon />
         <ValuePropositions />
         <Footer />

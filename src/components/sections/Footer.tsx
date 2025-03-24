@@ -1,8 +1,9 @@
+
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-6 bg-green-800 text-center">
+  return <footer className="px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-6 bg-green-800 text-center mt-auto flex-grow min-h-[100px] flex flex-col justify-center">
       
       <div className="text-sm text-white">
         <div className="mb-4 md:mb-0">
