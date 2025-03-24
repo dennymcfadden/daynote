@@ -68,8 +68,6 @@ export const EmailSignupForm: React.FC = () => {
           <p className="text-black font-medium text-left text-base">You're on the list. We'll be in touch soon. Now, be a pal and share with a friend.</p>
         </div>}
       
-      <p className="text-sm text-gray-600 mt-8">
-        Have a question? <a href="mailto:hi@denny.nyc" className="text-gray-600 underline">Send us an email.</a>
-      </p>
+      
     </form>;
 };
