@@ -61,21 +61,45 @@ export const EmailSignupForm: React.FC = () => {
     }
   };
 
-  return <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col text-[19px] mt-[12px] max-md:max-w-full max-md:mt-5">
-      {!isSubmitted ? <>
-          <input id="email" type="email" placeholder="Enter your email" {...register("email")} className={`w-[447px] border border-[color:var(--colorBorder,rgba(52,51,51,0.15))] bg-white min-h-[72px] md:min-h-[72px] max-md:min-h-[60px] max-w-full overflow-hidden text-[#696868] font-normal leading-[30px] mt-4 pl-6 rounded-lg border-solid max-md:max-w-full max-md:pl-5 ${errors.email ? "border-red-500" : ""}`} aria-invalid={errors.email ? "true" : "false"} />
-
-          {errors.email && <p className="text-red-500 text-sm mt-1 leading-relaxed">{errors.email.message}</p>}
-
-          <button type="submit" disabled={isSubmitting} className="flex-1 shrink basis-[0%] bg-[rgba(251,146,64,1)] md:min-h-12 max-md:min-h-10 w-[447px] max-w-full overflow-hidden text-black font-[590] text-center leading-[30px] mt-4 rounded-lg max-md:max-w-full hover:bg-[rgba(251,126,44,1)] transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed md:py-3 max-md:py-2">
+  return (
+    <div className="flex flex-col items-start gap-4 w-full">
+      {!isSubmitted ? (
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col gap-4">
+          <div className="flex h-[72px] sm:h-[56px] px-6 items-center w-full rounded-lg border border-[rgba(52,51,51,0.15)] bg-white">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              {...register("email")}
+              className="w-full text-[19.2px] sm:text-base font-normal leading-[130%] font-['Nunito_Sans'] text-[#696868] bg-transparent border-none focus:outline-none"
+            />
+          </div>
+          
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1 leading-relaxed">{errors.email.message}</p>
+          )}
+          
+          <button 
+            type="submit" 
+            disabled={isSubmitting}
+            className="flex h-12 justify-center items-center w-full rounded-lg bg-[#014532] text-white text-[19.2px] sm:text-base font-extrabold leading-[130%] font-['Nunito_Sans']"
+          >
             {isSubmitting ? "Submitting..." : "Join waitlist"}
           </button>
-        </> : <div className="w-[447px] max-w-full bg-[#D8D1CF] rounded-lg p-6 mt-4 text-center">
+        </form>
+      ) : (
+        <div className="w-full bg-[#D8D1CF] rounded-lg p-6 text-center">
           <p className="text-black font-medium text-left text-base">You're on the list. We'll be in touch soon. Now, be a pal and share with a friend.</p>
-        </div>}
+        </div>
+      )}
       
-      <p className="text-sm text-gray-600 mt-8">
-        Have an access code? <a href="https://my.daynote.app" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline">Sign up today</a>
-      </p>
-    </form>;
+      <a 
+        href="https://my.daynote.app" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-[#014532] text-2xl sm:text-xl font-medium leading-[150%] font-['Nunito_Sans'] underline text-center w-full"
+      >
+        Have an access code?
+      </a>
+    </div>
+  );
 };

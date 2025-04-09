@@ -1,21 +1,13 @@
 
 import React from "react";
-import { Separator } from "@/components/ui/separator";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="px-5 sm:px-8 md:px-12 lg:px-32 xl:px-48 2xl:px-64 py-6 bg-green-800 text-center mt-auto flex-grow min-h-[100px] flex flex-col">
-      <div className="text-sm text-white">
-        <div className="mb-4 md:mb-0">
-          © {currentYear} Daynote. Made by <a href="https://www.denny.nyc" target="_blank" rel="noopener noreferrer" className="text-white underline">Denny</a>.
-        </div>
-        <div className="flex gap-6">
-          
-          
-          
-        </div>
+    <footer className="flex justify-center items-center bg-[#014532] py-6 px-12">
+      <div className="text-white text-xl font-normal leading-[150%] text-center">
+        @{currentYear} • <a href="mailto:help@daynote.app" className="underline">help@daynote.app</a> • Made by <a href="#" className="underline">Denny</a>
       </div>
     </footer>
   );
