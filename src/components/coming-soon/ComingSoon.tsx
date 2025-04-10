@@ -52,13 +52,11 @@ export const ComingSoon: React.FC = () => {
         </div>
         
         <div className="flex flex-col items-start gap-4 w-full">
-          <h1 className="text-[#014532] text-6xl md:text-5xl sm:text-4xl font-black leading-[120%] font-['Nunito_Sans']">
+          <h1 className="text-[#014532] text-6xl md:text-5xl sm:text-4xl font-black leading-[140%] font-['Nunito_Sans']">
             The journal you will actually use.
           </h1>
           
-          <p className="text-[#014532] text-2xl md:text-xl sm:text-lg font-medium leading-[150%] font-['Nunito_Sans']">
-            Daynote is the best journal because it's the journal that you'll actually use. One audio note per day, automagically transcribed, zippity zap.
-          </p>
+          <p className="text-[#014532] text-2xl md:text-xl sm:text-lg font-medium leading-[160%] font-['Nunito_Sans']">One audio note per day, automagically transcribed—zippity zap.</p>
         </div>
         
         <EmailSignupForm />
