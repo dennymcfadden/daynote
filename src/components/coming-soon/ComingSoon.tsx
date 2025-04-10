@@ -3,12 +3,9 @@ import { Logo } from "./Logo";
 import { EmailSignupForm } from "./EmailSignupForm";
 import { ProductImage } from "./ProductImage";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 export const ComingSoon: React.FC = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section aria-labelledby="coming-soon-title" className="flex flex-col md:flex-row items-center justify-center gap-[60px] bg-[#F3EFEC] p-6 md:p-16 sm:p-10">
+  return <section aria-labelledby="coming-soon-title" className="flex flex-col md:flex-row items-center justify-center gap-[60px] bg-[#F3EFEC] p-6 md:p-16 sm:p-10">
       <div className="flex flex-col items-start gap-12 max-w-[600px] w-full">
         <div className="flex items-end gap-2">
           <svg id="74:391" width="66" height="58" viewBox="0 0 66 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[66px] h-[57px]">
@@ -68,8 +65,7 @@ export const ComingSoon: React.FC = () => {
       </div>
       
       <div className="flex-shrink-0 w-full md:max-w-[500px] h-[90vh] flex items-center">
-        <img alt="Phone mockup" className="w-full h-auto max-h-[90vh] object-contain" src="/lovable-uploads/56edde23-c19e-4127-a26a-0d50b47d93ef.png" />
+        <img alt="Phone mockup" className="w-full h-auto max-h-[90vh] object-contain" src="/lovable-uploads/46bcffe0-c273-438a-be64-f6f5a81318f2.png" />
       </div>
-    </section>
-  );
+    </section>;
 };
