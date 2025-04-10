@@ -6,8 +6,8 @@ export const Footer: React.FC = () => {
   
   return (
     <footer className="flex justify-center items-center bg-[#014532] py-6 px-12">
-      <div className="text-white text-xl font-normal leading-[150%] text-center">
-        @{currentYear} • <a href="mailto:help@daynote.app" className="underline">help@daynote.app</a> • Made by <a href="#" className="underline">Denny</a>
+      <div className="text-[#9C908C] text-l font-normal leading-[150%] text-center">
+        made by <a href="http://www.denny.nyc" className="underline">denny</a>
       </div>
     </footer>
   );
