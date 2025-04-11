@@ -69,7 +69,7 @@ export const EmailSignupForm: React.FC = () => {
           <p className="text-black font-medium text-left text-base">You're on the list. We'll be in touch soon. Now, be a pal and share with a friend.</p>
         </div>}
       
-      <a href="https://my.daynote.app" target="_blank" rel="noopener noreferrer" className="text-[#014532] text-2xl sm:text-xl font-medium leading-[150%] font-['Nunito_Sans'] underline text-center w-full">
+      <a href="https://my.daynote.app" target="_blank" rel="noopener noreferrer" className="text-[#014532] text-l font-medium font-['Nunito_Sans'] underline text-center w-full">
         Have an access code?
       </a>
     </div>;
