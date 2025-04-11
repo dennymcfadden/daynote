@@ -20,7 +20,7 @@ export const ValuePropositions: React.FC = () => {
 
           
           <h3 className="text-[#014532] text-2xl font-bold leading-[150%] font-['Nunito_Sans'] text-center w-full">
-            Easy transcription
+            Easy Transcription
           </h3>
           
           <p className="text-[#014532] text-xl font-medium leading-[150%] font-['Nunito_Sans'] text-center w-full">
@@ -34,7 +34,7 @@ export const ValuePropositions: React.FC = () => {
           </svg>
           
           <h3 className="text-[#014532] text-2xl font-bold leading-[150%] font-['Nunito_Sans'] text-center w-full">
-            Daily threads
+            Daily Threads
           </h3>
           
           <p className="text-[#014532] text-xl font-medium leading-[150%] font-['Nunito_Sans'] text-center w-full">
@@ -53,11 +53,11 @@ export const ValuePropositions: React.FC = () => {
           </svg>
           
           <h3 className="text-[#014532] text-2xl font-bold leading-[150%] font-['Nunito_Sans'] text-center w-full">
-            Sunday reflection
+            The Sunday Reflection
           </h3>
           
           <p className="text-[#014532] text-xl font-medium leading-[150%] font-['Nunito_Sans'] text-center w-full">
-            A simple look back on the week that passed—setting a course for the one ahead.
+            Your new favorite email. Reflect on the week that passed and set a course for the week ahead.
           </p>
         </div>
       </section>
