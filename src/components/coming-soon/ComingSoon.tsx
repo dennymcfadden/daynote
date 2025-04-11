@@ -56,7 +56,7 @@ export const ComingSoon: React.FC = () => {
             The journal you will actually use.
           </h1>
           
-          <p className="text-[#014532] text-xl font-medium leading-[160%] font-['Nunito_Sans']">One audio note per day, automagically transcribed, zippity zap. Turn moments into memories in an instant.</p>
+          <p className="text-[#014532] text-xl font-medium leading-[160%] font-['Nunito_Sans']">Turn moments into memories in an instant. One audio note per day, automagically transcribed, zippity zap.</p>
         </div>
         
         <EmailSignupForm />
